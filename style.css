@@ -1,0 +1,51 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+#main
+{
+    margin: 40px auto;
+    border: 2px blue solid;
+    width: fit-content;
+}
+
+
+img
+{
+    display: inline-block;
+    width: 450px;
+    height: 500px;
+    margin: 0px;
+
+}
+
+#form
+{
+    width: 450px;
+    height: 500px;
+}
+form
+{
+    display: inline-block;
+    vertical-align: top;
+    color: blue;
+    padding: 10px 30px;
+}
+
+.big
+{
+    margin: 5px;
+    width: 300px;
+    height: 30px;
+    border: 3px solid rgb(123, 122, 122);
+    outline: none;
+}
+
+input[type="submit"]
+{
+    color: aliceblue;
+    background-color: rgb(81, 73, 234);
+    border:  none;
+    height: 40px;
+}
