@@ -6,15 +6,17 @@ body
 #main
 {
     margin: 40px auto;
-    border: 2px blue solid;
+    border: 5px rgb(6, 6, 180) solid;
     width: fit-content;
+    width: 76%;
+    min-width: 480px;
 }
 
 
 img
 {
     display: inline-block;
-    width: 450px;
+    width: 48%;
     height: 500px;
     margin: 0px;
 
@@ -22,15 +24,27 @@ img
 
 #form
 {
-    width: 450px;
+    display: inline-block;
+    width: 48%;
     height: 500px;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: top;
 }
 form
 {
-    display: inline-block;
+    width: min-content;
+    margin: auto;
     vertical-align: top;
-    color: blue;
+    color: rgb(3, 3, 142);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px 30px;
+}
+
+form:first-of-type p
+{
+    position: relative;
+    top: 7px;
 }
 
 .big
@@ -48,4 +62,40 @@ input[type="submit"]
     background-color: rgb(81, 73, 234);
     border:  none;
     height: 40px;
+}
+
+
+.big:invalid
+{
+    border: 3px solid rgb(255, 68, 0);
+}
+
+.big:valid
+{
+    border: 3px solid rgb(81, 73, 234);
+}
+
+label[for="cb"]
+{
+    font-size: 0.65em;
+}
+
+@media only screen and (max-width: 910px)
+{
+    img {
+        width: 100%;
+    }
+
+    #form
+    {
+        width: 100%;
+    }
+
+    form
+    {
+        width: fit-content;
+        margin: auto;
+        position: relative;
+        
+    }
 }

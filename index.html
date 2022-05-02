@@ -9,60 +9,18 @@
 </head>
     <div id="main">
         <img src="ville.png" alt="Une image">
-        <span id="form">
+        <div id="form">
             <form action="#">
                 <h2 id="title">Welcome to Hotel Arina</h2>
                 <p id="sub-title">Sing up buddy</p>
-                <input type="text" id="name" class="big" placeholder="Name" required onchange="check()"><br>
-                <input type="email" id="email" class="big" placeholder="Email" required onchange="check()"><br>
-                <input type="number" id="phone" class="big" placeholder="Phone" required onchange="check()"><br>
-                <input type="text" id="addr" class="big"placeholder="Address" required onchange="check()"><br>
-                <input type="checkbox" id="cb" value="true" checked> I agree the terms & conditions<br>
-                <input type="submit" class="big" value="Send Request" onclick="check()">
-            </form>
+                <input type="text" id="name" class="big" placeholder="Name" minlength="10" required  pattern="[A-Z].+" ><br>
+                <input type="email" id="email" class="big" placeholder="Email" required  pattern="(.)+(@webcodepath.com)"><br>
+                <input type="number" id="phone" class="big" placeholder="Phone" required  ><br>
+                <input type="text" id="addr" class="big"placeholder="Address" minlength="10" required pattern="[A-Z].+" ><br>
+                <input type="checkbox" id="cb" value="true" checked> <label for="cb">I agree the terms & conditions</label> <br>
+                <input type="submit" class="big" value="Send Request">
+            </div>
         </span>
     </div>
-
-    <script language="javascript">
-        function check(){
-            var correct=true;
-            var rr="akaksl";
-
-            name=document.getElementById("name").value;
-            email=document.getElementById("email").value;
-            phone=document.getElementById("phone");
-            addr=document.getElementById("addr").value;
-
-            
-            if( name.length<10 || !name.match(/^[A-Z]/)){
-                document.getElementById("name").style.borderColor="#ff3d12"
-                correct=false;
-            }
-            else
-            {
-                document.getElementById("name").style.borderColor="#3112ff"
-            }
-
-            if( addr.length<10 || !addr.match(/^[A-Z]/)){
-                document.getElementById("addr").style.borderColor="#ff3d12"
-                correct=false;
-            }
-            else
-            {
-                document.getElementById("addr").style.borderColor="#3112ff"
-            }
-
-            if( !email.match(/[a-z0-9]*(@webcodepath.com)/)){
-                document.getElementById("email").style.borderColor="#ff3d12"
-                correct=false;
-            }
-            else
-            {
-                document.getElementById("email").style.borderColor="#3112ff"
-            }
-
-            return correct;
-        }
-    </script>
 </body>
 </html>
